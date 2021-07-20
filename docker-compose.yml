@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    image: hipeople
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      .env
+    environment:
+      TOKENS:
+    ports:
+      - '8080:8080'
+    tty: true
